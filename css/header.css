@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #0c2340;
+
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'spo-reg';
+    src: url('../font/SpoqaHanSansNeo-Regular.woff');
+}
+
+@font-face {
+    font-family: 'spo-bold';
+    src: url('../font/SpoqaHanSansNeo-Bold.woff');
+}
+
+body {
+    font-family: 'spo-reg';
+}
+
+/* --------header-content------------- */
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    display: none;
+}
+
+.mask-show {
+    display: block;
+}
+
+.ham-content {
+    position: fixed;
+    top: 0;
+    right: -800px;
+    /* right: 0; */
+    background-color: white;
+    padding: 50px 80px;
+    width: 800px;
+    height: 100%;
+    z-index: 99;
+    transition: ease-in-out .4s;
+}
+
+.ham-content .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ham-content .inner .close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: inherit;
+    background: url(../img/close_btn.svg);
+    top: -34px;
+    right: -68px;
+    cursor: pointer;
+}
+
+.ham-content .inner .menu {
+    width: 100%;
+    position: absolute;
+}
+
+.ham-content .inner .menu .de1 {}
+
+.ham-content .inner .menu .de1>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+    padding: 32px 0;
+}
+
+.ham-content .inner .menu .de1 li:last-child {
+    border: none;
+}
+
+.ham-content .inner .menu .de1>li>a {
+    display: block;
+    width: 36%;
+    font-weight: 900;
+    font-size: 3.6rem;
+}
+
+/* ------font-size 변경 */
+/* 14px (두번째) /기본 젤 큰 사이즈 */
+.ham-content .inner .menu .de1>li>a.font14-1 {
+    font-size: 32px;
+}
+
+.ham-content .inner .menu .de1>li .de2>li a.font14-2 {
+    font-size: 22px;
+}
+
+/* 11px (세번째)*/
+.ham-content .inner .menu .de1>li>a.font11-1 {
+    font-size: 28px;
+}
+
+.ham-content .inner .menu .de1>li .de2>li a.font11-2 {
+    font-size: 18px;
+}
+
+/* ------font-size 변경 */
+
+.ham-content .inner .menu .de1>li:hover>a {}
+
+.ham-content .inner .menu .de1>li .de2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    width: 64%;
+}
+
+.ham-content .inner .menu .de1>li .de2 li {
+    width: 50%;
+    line-height: 1.4;
+    /* 크기 절반 */
+}
+
+.ham-content .inner .menu .de1>li .de2 li a {
+    display: inline-block;
+    font-size: 26px;
+    position: relative;
+}
+
+.ham-content .inner .menu .de1>li .de2 li a::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #0c2340;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+
+.ham-content .inner .menu .de1>li .de2 li:hover a::after {
+    width: 100%;
+}
+
+.ham-content .inner .option {
+    position: absolute;
+    height: 32px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ham-content .inner .option .lang {
+    display: flex;
+    gap: 18px;
+}
+
+
+.ham-content .inner .option .lang span {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #999;
+    cursor: pointer;
+}
+
+.ham-content .inner .option .lang span.color {
+    color: inherit;
+}
+
+.ham-content .inner .option .font {
+    display: flex;
+    align-items: center;
+}
+
+.ham-content .inner .option .font p {
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.ham-content .inner .option .font span {
+    width: 38px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.ham-content .inner .option .font span.active {
+    background-color: #0c2340;
+    color: #fff;
+}
+
+.ham-content .inner .option .font span:nth-child(2) {
+    font-size: 11px;
+}
+
+.ham-content .inner .option .font span:nth-child(3) {
+    font-size: 14px;
+}
+
+.ham-content .inner .option .font span:nth-child(4) {
+    font-size: 18px;
+}
+
+.ham-content .inner .option .light {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ham-content .inner .option .light p {
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.ham-content .inner .option .light .toggle-bg {
+    width: 70px;
+    border-radius: 12px;
+    background-color: #ccc;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.ham-content .inner .option .light .toggle-bg .toggle-btn {
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    z-index: 52;
+}
+
+/* ham content 제이쿼리 / 보이기 */
+.ham-content-show {
+    right: 0;
+}
+
+/* --------header------------- */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 152px;
+    z-index: 9899;
+}
+
+header .inner {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 26px 40px 0;
+    position: relative;
+}
+
+header .inner h1 {
+    height: 34px;
+    width: 10%;
+
+}
+
+header .inner h1 a {
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+header .inner h1 a img {
+    max-height: 100%;
+}
+
+header .inner .head-up {
+    justify-content: space-between;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    align-items: center;
+}
+
+header .inner .head-up .head-right {
+    width: 1015px;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner .head-up h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+header .inner .head-up .hamburger {
+    height: 36px;
+    width: 36px;
+}
+
+header .inner .head-up .hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #0c2340;
+    margin: 6px auto;
+}
+
+/* 스크롤~~~!~!! */
+header .inner .head-down {
+    height: 58px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 스크롤~~~!~!! */
+
+header .inner .head-down ul {
+    width: 1015px;
+    float: right;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    border-bottom: 1px solid #Eee;
+}
+
+header .inner .head-down ul li {
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #999;
+    line-height: 1.5;
+    margin-right: 4rem;
+    display: inline-block;
+    letter-spacing: -2px;
+}
+
+header .inner .head-down ul li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #999;
+}
+
+header .inner .head-down ul li a.on {
+    border-bottom: 1px solid #0c2340;
+    font-weight: 700;
+    color: #0c2340;
+}

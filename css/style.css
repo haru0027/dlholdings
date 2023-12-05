@@ -1,0 +1,546 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #0c2340;
+
+}
+
+ul {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'spo-reg';
+    src: url('../font/SpoqaHanSansNeo-Regular.woff');
+}
+
+@font-face {
+    font-family: 'spo-bold';
+    src: url('../font/SpoqaHanSansNeo-Bold.woff');
+}
+
+body {
+    font-family: 'spo-reg';
+}
+
+/* --------header-content------------- */
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    display: none;
+}
+
+.mask-show {
+    display: block;
+}
+
+.ham-content {
+    position: fixed;
+    top: 0;
+    right: -800px;
+    /* right: 0; */
+    background-color: white;
+    padding: 50px 80px;
+    width: 800px;
+    height: 100%;
+    z-index: 99;
+    transition: ease-in-out .4s;
+}
+
+.ham-content .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ham-content .inner .close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: inherit;
+    background: url(../img/close_btn.svg);
+    top: -34px;
+    right: -68px;
+    cursor: pointer;
+}
+
+.ham-content .inner .menu {
+    width: 100%;
+    position: absolute;
+}
+
+.ham-content .inner .menu .de1 {}
+
+.ham-content .inner .menu .de1>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+    padding: 32px 0;
+}
+
+.ham-content .inner .menu .de1 li:last-child {
+    border: none;
+}
+
+.ham-content .inner .menu .de1>li>a {
+    display: block;
+    width: 36%;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+/* ------font-size 변경 */
+/* 14px (두번째) /기본 젤 큰 사이즈 */
+.ham-content .inner .menu .de1>li>a.font14-1 {
+    font-size: 32px;
+}
+
+.ham-content .inner .menu .de1>li .de2>li a.font14-2 {
+    font-size: 22px;
+}
+
+/* 11px (세번째)*/
+.ham-content .inner .menu .de1>li>a.font11-1 {
+    font-size: 28px;
+}
+
+.ham-content .inner .menu .de1>li .de2>li a.font11-2 {
+    font-size: 18px;
+}
+
+/* ------font-size 변경 */
+
+.ham-content .inner .menu .de1>li:hover>a {}
+
+.ham-content .inner .menu .de1>li .de2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    width: 64%;
+}
+
+.ham-content .inner .menu .de1>li .de2 li {
+    width: 50%;
+    line-height: 1.4;
+    /* 크기 절반 */
+}
+
+.ham-content .inner .menu .de1>li .de2 li a {
+    display: inline-block;
+    font-size: 26px;
+    position: relative;
+}
+
+.ham-content .inner .menu .de1>li .de2 li a::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #0c2340;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+
+.ham-content .inner .menu .de1>li .de2 li:hover a::after {
+    width: 100%;
+}
+
+.ham-content .inner .option {
+    position: absolute;
+    height: 32px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ham-content .inner .option .lang {
+    display: flex;
+    gap: 18px;
+}
+
+
+.ham-content .inner .option .lang span {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #999;
+    cursor: pointer;
+}
+
+.ham-content .inner .option .lang span.color {
+    color: inherit;
+}
+
+.ham-content .inner .option .font {
+    display: flex;
+    align-items: center;
+}
+
+.ham-content .inner .option .font p {
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.ham-content .inner .option .font span {
+    width: 38px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.ham-content .inner .option .font span.active {
+    background-color: #0c2340;
+    color: #fff;
+}
+
+.ham-content .inner .option .font span:nth-child(2) {
+    font-size: 11px;
+}
+
+.ham-content .inner .option .font span:nth-child(3) {
+    font-size: 14px;
+}
+
+.ham-content .inner .option .font span:nth-child(4) {
+    font-size: 18px;
+}
+
+.ham-content .inner .option .light {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ham-content .inner .option .light p {
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.ham-content .inner .option .light .toggle-bg {
+    width: 70px;
+    border-radius: 12px;
+    background-color: #ccc;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.ham-content .inner .option .light .toggle-bg .toggle-btn {
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    z-index: 52;
+}
+
+/* ham content 제이쿼리 / 보이기 */
+.ham-content-show {
+    right: 0;
+}
+
+/* --------header------------- */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+header .inner {
+    display: flex;
+    width: 1400px;
+    padding: 26px 0px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header .inner .logo {
+    display: block;
+    width: 242px;
+}
+
+header .inner .logo img {
+    display: block;
+    width: 242px;
+    transition: .3s ease;
+}
+
+header .inner .logo img.width-small {
+    width: 60px;
+}
+
+header .inner .hamburger {
+    width: 36px;
+    height: 36px;
+}
+
+header .inner .hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #0c2340;
+    margin: 6px auto;
+}
+
+/* --------main------------- */
+
+main {
+    Width: 100%;
+    padding-top: 264px;
+}
+
+main .six-box {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+main .six-box .inner {
+    padding-bottom: 180px;
+}
+
+main .six-box .inner .box-de1 {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    gap: 11px;
+    transition: all 0.5s;
+}
+
+main .six-box .inner .box-de1>li {
+    flex: 0.4 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: linear 0.4s;
+}
+
+main .six-box .inner .box-de1>li:hover {
+    flex: 1.4 0;
+}
+
+main .six-box .inner .box-de1>li .li-wrap {
+    margin: 10px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+main .six-box .inner .box-de1>li:nth-child(1) {
+    background: url('../img/mainvisual_01.jpg') no-repeat left center/cover;
+}
+
+main .six-box .inner .box-de1>li:nth-child(2) {
+    background: url('../img/mainvisual_02.jpg') no-repeat left center/cover;
+}
+
+main .six-box .inner .box-de1>li:nth-child(3) {
+    background: url('../img/mainvisual_03.jpg') no-repeat left center/cover;
+}
+
+main .six-box .inner .box-de1>li:nth-child(4) {
+    background: url('../img/mainvisual_04.jpg') no-repeat left center/cover;
+}
+
+main .six-box .inner .box-de1>li:nth-child(5) {
+    background: url('../img/mainvisual_05.jpg') no-repeat left center/cover;
+}
+
+main .six-box .inner .box-de1>li:nth-child(6) {
+    background: url('../img/mainvisual_06.jpg') no-repeat left center/cover;
+}
+
+main .six-box .inner .box-de1>li p {
+    font-size: 28px;
+    line-height: 1.4;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    white-space: normal;
+    font-family: 'spo-bold';
+}
+
+main .six-box .inner .box-de1>li .box-content {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    opacity: 0;
+    transition: cubic-bezier(0.77, 0.02, 0.18, 1) 0.4s;
+}
+
+main .six-box .inner .box-de1>li:hover .box-content {
+    opacity: 1;
+}
+
+main .six-box .inner .box-de1>li .box-content .box-de2 {}
+
+main .six-box .inner .box-de1>li .box-content .box-de2 li {
+    width: 200px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+main .six-box .inner .box-de1>li .box-content .box-de2 li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+main .six-box .inner .box-de1>li .box-content .box-de2 li a img {
+    width: 100%;
+}
+
+
+/* three-box */
+
+main .three-box {width: 100%;}
+
+main .three-box .inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+main .three-box .inner ul {
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+main .three-box .inner ul li {
+    width: calc(100% / 3 - 20px);
+}
+
+main .three-box .inner ul li a {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    transition: .4s;
+    background-color: #fff;
+}
+
+main .three-box .inner ul li:hover a {
+    border-top: 1px solid #0c2340;
+    border-bottom: 1px solid #0c2340;
+    background-color: #0c2340;
+}
+
+main .three-box .inner ul li a p {
+    display: block;
+    font-size: 24px;
+    line-height: 1.5;
+    transition: .4s;
+    width: 70%;
+    font-family: 'spo-bold';
+}
+
+main .three-box .inner ul li:hover a p {
+    color: white;
+}
+
+main .three-box .inner ul li a span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('../img/right-arrow-black.png')no-repeat center/cover;
+}
+
+main .three-box .inner ul li:hover a span {
+    background: url('../img/right-arrow-white.png')no-repeat center/cover;
+}
+
+/* --------footer------------- */
+footer {
+    background-color: white;
+    margin-top: 200px;
+    width: 100%;
+}
+
+footer .inner {
+    padding: 60px 0px;
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .inner .foot-left {}
+
+footer .inner .foot-left p {
+    color: #999;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+footer .inner .foot-right {}
+
+footer .inner .foot-right a {
+    margin-left: 30px;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+footer .inner .foot-right a:hover {
+    color: #0c2340;
+}
+
+.gotop {
+    position: fixed;
+    bottom: 140px;
+    right: 40px;
+    width: 48px;
+    height: 48px;
+    z-index: 9;
+    background: url('../img/top-arrow-black.png') no-repeat center/cover;
+    transition: .4s;
+}
+
+.gotop:hover {
+    background: url('../img/ico_top_btn_h.png') no-repeat center/cover;
+}

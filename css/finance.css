@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+main {
+    width: 1440px;
+    margin: 264px auto 0;
+}
+
+main .inner {
+    margin: 40px;
+    position: relative;
+}
+
+main .inner section {
+    width: 100%;
+}
+
+/* 재무상태표 */
+
+.side-right .line-chart {
+    display: flex;
+    margin-bottom: 80px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.side-right .line-chart li {
+    width: 325px;
+}
+
+.side-right .line-chart li img {
+    max-width: 100%;
+}
+
+.side-right .table {}
+
+.side-right .table table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.side-right .table table thead {
+    background-color: #f9f9f9;
+}
+
+.side-right .table table thead tr {
+    border: none;
+}
+
+.side-right .table table thead tr th:first-child {
+    font-size: 16px;
+    color: #aaa;
+    line-height: 44px;
+}
+
+.side-right .table table tbody {}
+
+.side-right .table table tfoot {}
+
+.side-right .table table tr {
+    border-bottom: 1px solid #eee;
+    height: 42px;
+}
+
+.side-right .table table tr.underline {
+    border-bottom: 1px solid #ccc;
+}
+
+main .finance .side-right .table table tr td {
+    padding-left: 12PX;
+    font-weight: normal;
+}
+
+main .finance .side-right .table table tr td.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* 재무정리 */
+
+main .inner h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-left: calc(25% - 5px);
+}
+
+main .inner .tab-menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin-top: 80px;
+    position: sticky;
+    top: 88px;
+    left: 0;
+}
+
+main .inner .tab-menu li {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+main .inner .tab-menu li a {
+    display: block;
+    text-align: center;
+    padding: 18px 0;
+    line-height: 1.5;
+    background-color: #eee;
+    font-weight: 700;
+    color: #0c2340;
+}
+
+main .inner .tab-menu li a.on {
+    background-color: #0c2340;
+    color: #fff;
+}
+
+main .inner .tab-item {
+    width: 100%;
+    margin-top: 100px;
+}
+
+main .inner .tab-item>* {
+    display: none;
+}
+
+main .inner .tab-item>*.on {
+    display: block;
+}
+
+main .inner .tab-item>* .wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+main .side-left {
+    width: calc(25% - 15px);
+}
+
+main .side-left h3 {
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+main .side-right {
+    width: calc(75% - 5px);
+}
+
+/* table */
+main .finance .side-right h4 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+main .side-right table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border-top: 1px solid #0c2340;
+    color: #0c2340;
+}
+
+main .side-right table thead {
+    background-color: #f8f8f8;
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+main .side-right table thead tr th {
+    padding-left: 12px;
+}
+
+main .side-right table tbody tr {
+    border-bottom: 1px solid #eee;
+    height: 70px;
+}
+
+main .side-right table tbody tr td {
+    padding: 8px 0 8px 12px;
+    line-height: 1.5;
+}
+
+main .finance .side-right table td:nth-child(1) {
+    font-weight: 900;
+}
+
+/* year */
+
+main .side-left .year {
+    width: 160px;
+    overflow: hidden;
+}
+
+main .side-left .year .select {
+    font-size: 14px;
+    line-height: 1.4;
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 24px;
+    width: 160px;
+    height: 50px;
+    color: #0c2340;
+    background-color: #f9f9f9;
+    padding: 15px 98px 14px 16px;
+    position: relative;
+    outline: none;
+    border: none;
+}
+
+main .side-left .year .select:hover {
+    background-color: #eee;
+}
+
+main .side-left .year .select::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url('../img/ir/ico_dropdown.png') no-repeat center/cover;
+}
+
+main .side-left .year .option {
+    width: 160px;
+    display: none;
+    overflow-y: scroll;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+main .side-left .year .option li {
+    width: 100%;
+}
+
+main .side-left .year .option li button {
+    outline: none;
+    border: none;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    padding: 15px 58px 14px 16px;
+    display: inline-block;
+}
+
+main .side-left .year .option li:hover button {
+    background-color: #eee;
+}

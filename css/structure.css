@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+main {
+    width: 1440px;
+    margin: 264px auto 0;
+}
+
+main .inner {
+    margin: 40px;
+    position: relative;
+}
+
+main .inner section {
+    width: 100%;
+}
+
+
+/* 지배구조 정보 */
+
+main .inner .structure h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-left: calc(25% - 5px);
+}
+
+
+main .inner .structure .tab-menu {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin-top: 80px;
+    position: sticky;
+    top: 88px;
+    left: 0;
+}
+
+main .inner .structure .tab-menu li {
+    width: 25%;
+    height: 100%;
+}
+
+main .inner .tab-menu li a {
+    display: block;
+    text-align: center;
+    padding: 18px 0;
+    line-height: 1.5;
+    background-color: #eee;
+    font-weight: 700;
+    color: #0c2340;
+}
+
+main .inner .tab-menu li a.on {
+    background-color: #0c2340;
+    color: #fff;
+}
+
+main .inner .tab-item {
+    width: 100%;
+    margin-top: 100px;
+}
+
+main .inner .tab-item>* {
+    display: none;
+}
+
+main .inner .tab-item>*.on {
+    display: block;
+}
+
+main .inner .tab-item>* .wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+main .side-left {
+    width: calc(25% - 15px);
+}
+
+main .side-left h3 {
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+main .side-right {
+    width: calc(75% - 5px);
+}
+
+
+
+

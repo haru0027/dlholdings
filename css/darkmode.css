@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* 토글 버튼 */
+.ham-content .inner .option .light .toggle-bg-active {
+    background-color: #fff;
+}
+
+.ham-content .inner .option .light .toggle-bg .toggle-btn-black {
+    background-color: #000;
+    left: 42px;
+}
+
+/* ham-content */
+.ham-content-dark {
+    background-color: #111;
+}
+
+.ham-content .inner .menu .de1 a.dark {
+    color: white;
+}
+
+.ham-content .inner .menu .de1>li .de2 li .dark::after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.ham-content .inner .menu .de1>li .de2 li:hover .dark::after {
+    width: 100%;
+}
+
+.ham-content .inner .menu .de1>li.border-dark {
+    border-color: #444;
+}
+
+.ham-content .inner .option .font span.span-dark {
+    background-color: #555;
+    color: #fff;
+}
+
+/* 연구 필요.... ㅠㅠㅠ */
+.ham-content .inner .option .font span.active-dark {
+    background-color: #fff;
+    color: #111;
+}
+
+.ham-content .inner .option .font p.p-dark {
+    color: #fff;
+}
+
+/* kor / eng...ㅠㅠ */
+
+
+.ham-content .inner .close-dark {
+    background: url('../img/close-white.svg');
+}
+.ham-content .inner .option .light p.light-dark {
+color: #fff;
+}
+
+/* 본문 */
+/* header */
+.header-dark {
+    background-color: #111;
+}
+
+.body-dark {
+    background-color: #111;
+}
+
+header .inner .logo img.img-dark {
+    filter: brightness(100);
+    opacity: 0.5;
+}
+
+header .inner .hamburger span.head-span-dark {
+    background-color: white;
+}
+
+/* main  */
+main .three-box .inner ul li a.three-dark {
+    background-color: #111;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+
+main .three-box .inner ul li a .arrow-dark {
+    background: url('../img/right-arrow-white.png')no-repeat center/cover;
+}
+
+main .three-box .inner ul li:hover a .arrow-dark {
+    background: url('../img/right-arrow-black.png')no-repeat center/cover;
+}
+
+main .three-box .inner ul li:hover .three-dark {
+    background-color: #fff;
+}
+
+main .three-box .inner ul li:hover .three-dark p {
+    color: #111;
+}
+
+/* footer */
+
+.footer-dark {
+    background-color: #111;
+}
+
+footer .inner .foot-left p.footp-dark {
+    color: #666;
+}
+
+footer .inner .foot-right a.foota-dark {
+    color: #666;
+}
+
+footer .inner .foot-right .foota-dark:hover {
+    color: white;
+}

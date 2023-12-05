@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+main {
+    width: 1440px;
+    margin: 264px auto 0;
+}
+
+main .inner {
+    margin: 40px;
+    position: relative;
+}
+
+main .inner section {
+    width: 100%;
+    height: 1100px;
+}
+
+main .inner .ESG {}
+
+main .inner .ESG h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-left: calc(25% - 5px);
+    padding-bottom: 80px;
+    border-bottom: 3px solid #0c2340;
+}
+
+main .inner .tab-item {
+    width: 100%;
+    margin-top: 100px;
+}
+
+main .inner .tab-item .wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+main .side-left {
+    width: calc(25% - 15px);
+}
+
+main .side-left h3 {
+    font-size: 28px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+main .side-left h3 span {
+    font-size: 16px;
+    line-height: 24px;
+    color: #999;
+    padding-left: 16px;
+}
+
+main .side-left p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 24px;
+    color: #999;
+    font-weight: 700;
+}
+
+main .side-right {
+    width: calc(75% - 5px);
+}
+
+
+main .side-right .top {
+    display: flex;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 0 0;
+    position: relative;
+    width: 100%;
+}
+
+main .side-right .top h4 {
+    font-size: 24px;
+    font-weight: 900;\
+    color: #333;
+    letter-spacing: -0.8px;
+}
+
+main .side-right .top a {
+    width: 138px;
+    height: 36px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+main .side-right .top a img {
+    max-width: 100%;
+}

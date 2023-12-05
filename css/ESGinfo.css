@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+main {
+    width: 1440px;
+    margin: 264px auto 0;
+}
+
+main .inner {
+    margin: 40px;
+    position: relative;
+}
+
+main .inner section {
+    width: 100%;height: 1100px;
+}
+
+main .inner .ESG {}
+
+main .inner .ESG h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-left: calc(25% - 5px);
+}
+
+main .inner .tab-item {
+    width: 100%;
+    margin-top: 240px;
+}
+
+main .inner .tab-item .wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+main .side-left {
+    width: calc(25% - 15px);
+}
+
+main .side-left h3 {
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+main .side-right {
+    width: calc(75% - 5px);
+}
+
+main .ESG .side-right h4 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+main .side-right table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border-top: 1px solid #0c2340;
+    color: #0c2340;
+}
+
+main .side-right table thead {
+    background-color: #f8f8f8;
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+main .side-right table thead tr {}
+
+main .side-right table thead tr th {
+    padding-left: 12px;text-align: center;
+}
+main .side-right table thead tr th:first-child {
+    text-align: left;
+}
+main .side-right table tbody {}
+
+main .side-right table tbody tr {
+    border-bottom: 1px solid #eee;
+    height: 42px;
+}
+
+main .side-right table tbody tr td {
+    padding: 8px 0 8px 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+main .side-right table tbody tr td:first-child {
+    font-weight: 900;text-align: left;
+}
+
+main .side-right table tbody tr td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 15px 67px 14px 20px;
+    font-weight: bold;
+    background: url('../img/ir/bix3-2.png') no-repeat 90% 50%/ 32px 32px, #f9f9f9;
+    border: 1px solid #f9f9f9;
+    transition: all .4s;
+}
+
+main .side-right table tbody tr td a:hover {
+    background: url('../img/ir/ico_download_white.png') no-repeat 90% 50%/ 32px 32px, #0c2340;
+    color: #fff;
+}
+
+main .side-right p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 16px;
+    color: #999;
+}
